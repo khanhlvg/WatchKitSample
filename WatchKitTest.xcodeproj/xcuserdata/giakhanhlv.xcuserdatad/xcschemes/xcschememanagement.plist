@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SharedLibrary.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>WatchKitTest Watch App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>WatchKitTest.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,12 +22,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>A05D38451A2B59C600515580</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A0B4C5331A2AE1EA00A25C89</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A0B4C54C1A2AE1EB00A25C89</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A0B4C5611A2AFA6800A25C89</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A0B4C56B1A2AFA6800A25C89</key>
 		<dict>
 			<key>primary</key>
 			<true/>

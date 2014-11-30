@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+    </dependencies>
+    <scenes>
+        <!--店舗一覧-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="店舗一覧" id="AgC-eL-Hgc" customClass="KBShopListInterfaceController">
+                    <items>
+                        <table alignment="left" layout="vertical" id="V1I-4x-LNw">
+                            <items>
+                                <tableRow identifier="shopRow" id="jti-iN-OAY" customClass="KBShopTableRowDto">
+                                    <group key="rootItem" width="1" alignment="left" id="uTs-3x-PQi">
+                                        <items>
+                                            <label alignment="left" text="店名" id="RSL-C8-uNZ"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="RLH-j7-duP" kind="push" id="Itu-cJ-zFU"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="shopNameLabel" destination="RSL-C8-uNZ" id="ih9-Lg-VHj"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="V1I-4x-LNw" id="M9C-oC-KWJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--店舗の詳細-->
+        <scene sceneID="hCo-e9-Aj3">
+            <objects>
+                <controller title="店舗の詳細" id="RLH-j7-duP" customClass="KBShopDetailInterfaceController">
+                    <items>
+                        <imageView width="136" height="81" alignment="center" id="U4e-FK-JEe"/>
+                        <label alignment="center" text="Label" textAlignment="center" numberOfLines="0" id="wZr-b0-mbl"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Go" id="pBm-qO-a4J">
+                            <connections>
+                                <segue destination="LJb-vl-K5H" kind="push" id="1dQ-tt-zTA"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="shopImage" destination="U4e-FK-JEe" id="2ZR-wL-KJn"/>
+                        <outlet property="shopNameLabel" destination="wZr-b0-mbl" id="LhE-BJ-L3F"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="482" y="352"/>
+        </scene>
+        <!--地図-->
+        <scene sceneID="R0m-yP-kke">
+            <objects>
+                <controller title="地図" id="LJb-vl-K5H" customClass="KBShopMapInterfaceController">
+                    <items>
+                        <map height="138" alignment="center" verticalAlignment="center" id="GOu-0s-gKZ"/>
+                    </items>
+                    <connections>
+                        <outlet property="mapView" destination="GOu-0s-gKZ" id="InW-kt-UCk"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="715" y="347"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>
